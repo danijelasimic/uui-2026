@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uvod u informatiku 2026/2027 — seminarski radovi</title>
+    <style>
+        :root { --tamna: #1f3864; --akcent: #2e75b6; --svetla: #f4f6fa; }
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: var(--svetla); color: #222; }
+        header { background: var(--tamna); color: #fff; padding: 2rem 1.5rem; }
+        header h1 { margin: 0 0 .4rem 0; }
+        header p { margin: 0; opacity: .85; }
+        main { max-width: 980px; margin: 0 auto; padding: 1.5rem; }
+        .grupa h2 { color: var(--tamna); border-bottom: 2px solid var(--akcent); padding-bottom: .3rem; margin-top: 2rem; }
+        ol.teme { list-style: none; padding: 0; }
+        li.tema { background: #fff; border: 1px solid #dde3ec; border-radius: 6px; padding: .55rem .8rem; margin: .35rem 0;
+                   display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+        .id { font-weight: bold; color: var(--akcent); min-width: 2.6rem; }
+        .naziv { flex: 1 1 340px; }
+        .tezina { font-size: .75rem; padding: .1rem .45rem; border-radius: 10px; background: #eee; }
+        .tezina.osnovna { background: #e2f0d9; } .tezina.srednja { background: #fff2cc; } .tezina.napredna { background: #fbe5d6; }
+        .nije-predato { color: #999; font-style: italic; font-size: .9rem; }
+        li.tema a { font-weight: bold; color: var(--tamna); text-decoration: none; border-bottom: 2px solid var(--akcent); }
+        li.tema a:hover { color: var(--akcent); }
+        footer { text-align: center; color: #777; font-size: .85rem; padding: 2rem 1rem; }
+    </style>
+</head>
+<body>
+    <!--
+        UPUTSTVO ZA STUDENTE
+        ====================
+        U ovom fajlu menjaš TAČNO JEDAN RED: red "još nije predato" u slotu SVOJE teme.
+        Zameni ga linkom ka svom radu, npr. za temu T27:
+
+        PRE:
+                    <span class="nije-predato">još nije predato</span>
+        POSLE:
+                    <a href="studenti/petar_petrovic_mi26042/index.html">Petar Petrović</a>
+
+        Ne menjaj ništa drugo: ni naziv teme, ni prazne redove, ni tuđe slotove.
+        Svaka tema ima svoj slot razdvojen praznim redom — zato se izmene različitih
+        studenata spajaju bez konflikata.
+    -->
+    <header>
+        <h1>Uvod u informatiku — seminarski radovi 2026/2027</h1>
+        <p>Tema: naredbe terminala. Svaki rad je napravljen ručno u HTML-u i CSS-u, uz LaTeX dokument.</p>
+    </header>
+    <main>
+        <section class="grupa">
+            <h2>Fajlovi i direktorijumi</h2>
+            <ol class="teme">
+                <!-- T01 -->
+                <li class="tema" id="T01">
+                    <span class="id">T01</span> <span class="naziv">ls — listanje sadržaja direktorijuma</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T02 -->
+                <li class="tema" id="T02">
+                    <span class="id">T02</span> <span class="naziv">Putanje: pwd, basename, dirname, realpath</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T03 -->
+                <li class="tema" id="T03">
+                    <span class="id">T03</span> <span class="naziv">mkdir i rmdir — pravljenje i brisanje direktorijuma</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T04 -->
+                <li class="tema" id="T04">
+                    <span class="id">T04</span> <span class="naziv">cp — kopiranje fajlova i direktorijuma</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T05 -->
+                <li class="tema" id="T05">
+                    <span class="id">T05</span> <span class="naziv">mv — premeštanje i preimenovanje</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T06 -->
+                <li class="tema" id="T06">
+                    <span class="id">T06</span> <span class="naziv">rm — brisanje fajlova</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T07 -->
+                <li class="tema" id="T07">
+                    <span class="id">T07</span> <span class="naziv">touch — pravljenje fajlova i vremenske oznake</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T08 -->
+                <li class="tema" id="T08">
+                    <span class="id">T08</span> <span class="naziv">stat — detaljne informacije o fajlu</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T09 -->
+                <li class="tema" id="T09">
+                    <span class="id">T09</span> <span class="naziv">ln — tvrdi i simbolički linkovi</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T10 -->
+                <li class="tema" id="T10">
+                    <span class="id">T10</span> <span class="naziv">file — određivanje tipa fajla</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T11 -->
+                <li class="tema" id="T11">
+                    <span class="id">T11</span> <span class="naziv">tree — prikaz stabla direktorijuma</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T12 -->
+                <li class="tema" id="T12">
+                    <span class="id">T12</span> <span class="naziv">find — pretraga po imenu i tipu</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T13 -->
+                <li class="tema" id="T13">
+                    <span class="id">T13</span> <span class="naziv">find — napredno: veličina, vreme, prava, -exec</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T14 -->
+                <li class="tema" id="T14">
+                    <span class="id">T14</span> <span class="naziv">locate i updatedb — brza pretraga po bazi</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T15 -->
+                <li class="tema" id="T15">
+                    <span class="id">T15</span> <span class="naziv">du — zauzeće prostora na disku</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T16 -->
+                <li class="tema" id="T16">
+                    <span class="id">T16</span> <span class="naziv">df — slobodan prostor na fajl-sistemima</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Pregled i obrada teksta</h2>
+            <ol class="teme">
+                <!-- T17 -->
+                <li class="tema" id="T17">
+                    <span class="id">T17</span> <span class="naziv">cat i tac — prikaz i spajanje fajlova</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T18 -->
+                <li class="tema" id="T18">
+                    <span class="id">T18</span> <span class="naziv">less i more — pregled dugačkih fajlova</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T19 -->
+                <li class="tema" id="T19">
+                    <span class="id">T19</span> <span class="naziv">head i tail — početak i kraj fajla</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T20 -->
+                <li class="tema" id="T20">
+                    <span class="id">T20</span> <span class="naziv">wc — brojanje linija, reči i znakova</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T21 -->
+                <li class="tema" id="T21">
+                    <span class="id">T21</span> <span class="naziv">sort — osnovno sortiranje</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T22 -->
+                <li class="tema" id="T22">
+                    <span class="id">T22</span> <span class="naziv">sort — napredno: po kolonama i ključevima</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T23 -->
+                <li class="tema" id="T23">
+                    <span class="id">T23</span> <span class="naziv">uniq — uklanjanje i brojanje ponavljanja</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T24 -->
+                <li class="tema" id="T24">
+                    <span class="id">T24</span> <span class="naziv">cut — izdvajanje kolona</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T25 -->
+                <li class="tema" id="T25">
+                    <span class="id">T25</span> <span class="naziv">paste i join — spajanje fajlova po kolonama</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T26 -->
+                <li class="tema" id="T26">
+                    <span class="id">T26</span> <span class="naziv">tr — zamena i brisanje znakova</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T27 -->
+                <li class="tema" id="T27">
+                    <span class="id">T27</span> <span class="naziv">grep — osnovna pretraga teksta</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T28 -->
+                <li class="tema" id="T28">
+                    <span class="id">T28</span> <span class="naziv">grep — osnovni regularni izrazi (BRE)</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T29 -->
+                <li class="tema" id="T29">
+                    <span class="id">T29</span> <span class="naziv">grep -E — prošireni regularni izrazi (ERE)</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T30 -->
+                <li class="tema" id="T30">
+                    <span class="id">T30</span> <span class="naziv">grep — rekurzivna pretraga i kontekst</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T31 -->
+                <li class="tema" id="T31">
+                    <span class="id">T31</span> <span class="naziv">sed — osnovno: zamena teksta</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T32 -->
+                <li class="tema" id="T32">
+                    <span class="id">T32</span> <span class="naziv">sed — napredno: adrese, brisanje, više komandi</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T33 -->
+                <li class="tema" id="T33">
+                    <span class="id">T33</span> <span class="naziv">awk — osnovno: polja i ispis</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T34 -->
+                <li class="tema" id="T34">
+                    <span class="id">T34</span> <span class="naziv">awk — napredno: uslovi, promenljive, BEGIN/END</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T35 -->
+                <li class="tema" id="T35">
+                    <span class="id">T35</span> <span class="naziv">diff — poređenje fajlova</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T36 -->
+                <li class="tema" id="T36">
+                    <span class="id">T36</span> <span class="naziv">patch — primena izmena</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T37 -->
+                <li class="tema" id="T37">
+                    <span class="id">T37</span> <span class="naziv">cmp i comm — bajt-po-bajt i poređenje sortiranih listi</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T38 -->
+                <li class="tema" id="T38">
+                    <span class="id">T38</span> <span class="naziv">echo i printf — ispis teksta</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T39 -->
+                <li class="tema" id="T39">
+                    <span class="id">T39</span> <span class="naziv">tee — ispis na ekran i u fajl istovremeno</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T40 -->
+                <li class="tema" id="T40">
+                    <span class="id">T40</span> <span class="naziv">xargs — pretvaranje ulaza u argumente</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T41 -->
+                <li class="tema" id="T41">
+                    <span class="id">T41</span> <span class="naziv">nl, fold i column — formatiranje teksta</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T42 -->
+                <li class="tema" id="T42">
+                    <span class="id">T42</span> <span class="naziv">split — deljenje fajla na delove</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T43 -->
+                <li class="tema" id="T43">
+                    <span class="id">T43</span> <span class="naziv">seq i shuf — nizovi brojeva i nasumičan redosled</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T44 -->
+                <li class="tema" id="T44">
+                    <span class="id">T44</span> <span class="naziv">rev i fmt — obrtanje linija i preformatiranje pasusa</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Prava pristupa i korisnici</h2>
+            <ol class="teme">
+                <!-- T45 -->
+                <li class="tema" id="T45">
+                    <span class="id">T45</span> <span class="naziv">chmod — prava pristupa</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T46 -->
+                <li class="tema" id="T46">
+                    <span class="id">T46</span> <span class="naziv">chown i chgrp — vlasnik i grupa</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T47 -->
+                <li class="tema" id="T47">
+                    <span class="id">T47</span> <span class="naziv">umask — podrazumevana prava novih fajlova</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T48 -->
+                <li class="tema" id="T48">
+                    <span class="id">T48</span> <span class="naziv">id, whoami i groups — identitet korisnika</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T49 -->
+                <li class="tema" id="T49">
+                    <span class="id">T49</span> <span class="naziv">sudo — izvršavanje sa privilegijama</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Procesi i sistem</h2>
+            <ol class="teme">
+                <!-- T50 -->
+                <li class="tema" id="T50">
+                    <span class="id">T50</span> <span class="naziv">ps — prikaz procesa</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T51 -->
+                <li class="tema" id="T51">
+                    <span class="id">T51</span> <span class="naziv">top i htop — praćenje procesa u realnom vremenu</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T52 -->
+                <li class="tema" id="T52">
+                    <span class="id">T52</span> <span class="naziv">kill, killall i pkill — slanje signala procesima</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T53 -->
+                <li class="tema" id="T53">
+                    <span class="id">T53</span> <span class="naziv">jobs, bg, fg i nohup — poslovi u pozadini</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T54 -->
+                <li class="tema" id="T54">
+                    <span class="id">T54</span> <span class="naziv">nice i renice — prioritet procesa</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T55 -->
+                <li class="tema" id="T55">
+                    <span class="id">T55</span> <span class="naziv">lsof — otvoreni fajlovi</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T56 -->
+                <li class="tema" id="T56">
+                    <span class="id">T56</span> <span class="naziv">free — memorija</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T57 -->
+                <li class="tema" id="T57">
+                    <span class="id">T57</span> <span class="naziv">uname i hostname — informacije o sistemu</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T58 -->
+                <li class="tema" id="T58">
+                    <span class="id">T58</span> <span class="naziv">uptime, w i who — ko je prijavljen i koliko radi sistem</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T59 -->
+                <li class="tema" id="T59">
+                    <span class="id">T59</span> <span class="naziv">lsblk i mount — diskovi i montiranje</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T60 -->
+                <li class="tema" id="T60">
+                    <span class="id">T60</span> <span class="naziv">date — datum i vreme</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T61 -->
+                <li class="tema" id="T61">
+                    <span class="id">T61</span> <span class="naziv">cal i ncal — kalendar</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T62 -->
+                <li class="tema" id="T62">
+                    <span class="id">T62</span> <span class="naziv">time — merenje vremena izvršavanja</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T63 -->
+                <li class="tema" id="T63">
+                    <span class="id">T63</span> <span class="naziv">watch — periodično izvršavanje naredbe</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T64 -->
+                <li class="tema" id="T64">
+                    <span class="id">T64</span> <span class="naziv">crontab — zakazivanje poslova</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Okruženje i ljuska</h2>
+            <ol class="teme">
+                <!-- T65 -->
+                <li class="tema" id="T65">
+                    <span class="id">T65</span> <span class="naziv">Promenljive okruženja: env, export, printenv</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T66 -->
+                <li class="tema" id="T66">
+                    <span class="id">T66</span> <span class="naziv">history — istorija naredbi</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T67 -->
+                <li class="tema" id="T67">
+                    <span class="id">T67</span> <span class="naziv">alias i unalias — skraćenice za naredbe</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T68 -->
+                <li class="tema" id="T68">
+                    <span class="id">T68</span> <span class="naziv">which, whereis i type — gde se nalazi naredba</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T69 -->
+                <li class="tema" id="T69">
+                    <span class="id">T69</span> <span class="naziv">man, info i apropos — dokumentacija</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T70 -->
+                <li class="tema" id="T70">
+                    <span class="id">T70</span> <span class="naziv">test i [ ] — provera uslova</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T71 -->
+                <li class="tema" id="T71">
+                    <span class="id">T71</span> <span class="naziv">bc — kalkulator proizvoljne preciznosti</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Arhiviranje i kompresija</h2>
+            <ol class="teme">
+                <!-- T72 -->
+                <li class="tema" id="T72">
+                    <span class="id">T72</span> <span class="naziv">tar — arhiviranje</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T73 -->
+                <li class="tema" id="T73">
+                    <span class="id">T73</span> <span class="naziv">gzip, gunzip i zcat — kompresija</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T74 -->
+                <li class="tema" id="T74">
+                    <span class="id">T74</span> <span class="naziv">bzip2 i xz — kompresija drugim algoritmima</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T75 -->
+                <li class="tema" id="T75">
+                    <span class="id">T75</span> <span class="naziv">zip i unzip — ZIP arhive</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Mreža</h2>
+            <ol class="teme">
+                <!-- T76 -->
+                <li class="tema" id="T76">
+                    <span class="id">T76</span> <span class="naziv">ping — provera dostupnosti računara</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T77 -->
+                <li class="tema" id="T77">
+                    <span class="id">T77</span> <span class="naziv">traceroute — putanja paketa kroz mrežu</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T78 -->
+                <li class="tema" id="T78">
+                    <span class="id">T78</span> <span class="naziv">ip — mrežni interfejsi i rute</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T79 -->
+                <li class="tema" id="T79">
+                    <span class="id">T79</span> <span class="naziv">ss i netstat — mrežne konekcije i portovi</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T80 -->
+                <li class="tema" id="T80">
+                    <span class="id">T80</span> <span class="naziv">dig i nslookup — DNS upiti</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T81 -->
+                <li class="tema" id="T81">
+                    <span class="id">T81</span> <span class="naziv">curl — prenos podataka preko URL-a</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T82 -->
+                <li class="tema" id="T82">
+                    <span class="id">T82</span> <span class="naziv">wget — preuzimanje fajlova sa interneta</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T83 -->
+                <li class="tema" id="T83">
+                    <span class="id">T83</span> <span class="naziv">ssh — udaljeni pristup</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T84 -->
+                <li class="tema" id="T84">
+                    <span class="id">T84</span> <span class="naziv">ssh-keygen — SSH ključevi</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T85 -->
+                <li class="tema" id="T85">
+                    <span class="id">T85</span> <span class="naziv">scp — kopiranje preko SSH-a</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T86 -->
+                <li class="tema" id="T86">
+                    <span class="id">T86</span> <span class="naziv">rsync — sinhronizacija fajlova</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Binarni podaci i kontrolne sume</h2>
+            <ol class="teme">
+                <!-- T87 -->
+                <li class="tema" id="T87">
+                    <span class="id">T87</span> <span class="naziv">md5sum i sha256sum — kontrolne sume</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T88 -->
+                <li class="tema" id="T88">
+                    <span class="id">T88</span> <span class="naziv">base64 — kodiranje binarnih podataka</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T89 -->
+                <li class="tema" id="T89">
+                    <span class="id">T89</span> <span class="naziv">xxd, od i hexdump — prikaz bajtova</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T90 -->
+                <li class="tema" id="T90">
+                    <span class="id">T90</span> <span class="naziv">strings — čitljivi tekst iz binarnih fajlova</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T91 -->
+                <li class="tema" id="T91">
+                    <span class="id">T91</span> <span class="naziv">dd — kopiranje blokova podataka</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+        <section class="grupa">
+            <h2>Alati u terminalu</h2>
+            <ol class="teme">
+                <!-- T92 -->
+                <li class="tema" id="T92">
+                    <span class="id">T92</span> <span class="naziv">nano — jednostavan tekst editor</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T93 -->
+                <li class="tema" id="T93">
+                    <span class="id">T93</span> <span class="naziv">vim — osnove rada</span> <span class="tezina srednja">srednja</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T94 -->
+                <li class="tema" id="T94">
+                    <span class="id">T94</span> <span class="naziv">tmux — više terminala u jednom</span> <span class="tezina napredna">napredna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+                <!-- T95 -->
+                <li class="tema" id="T95">
+                    <span class="id">T95</span> <span class="naziv">apt — instalacija programa</span> <span class="tezina osnovna">osnovna</span>
+                    <span class="nije-predato">još nije predato</span>
+                </li>
+
+            </ol>
+        </section>
+    </main>
+    <footer>
+        Matematički fakultet, Univerzitet u Beogradu — Uvod u informatiku, školska 2026/2027.
+    </footer>
+</body>
+</html>
