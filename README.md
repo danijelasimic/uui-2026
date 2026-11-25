@@ -81,7 +81,7 @@ Ukratko, šta radiš:
 2. Napraviš **fork** repozitorijuma predmeta (svoju kopiju na GitHub-u).
 3. Kloniraš **svoj fork** i napraviš **svoju granu**.
 4. U folderu `studenti/ime_prezime_brindeksa/` napraviš svoj rad.
-5. U glavnom `index.html` zameniš **jedan red** u slotu svoje teme.
+5. U glavni `index.html` dodaš **jedan `<li>`** za svoj rad.
 6. Pošalješ (push) svoju granu u svoj fork i otvoriš **Pull Request** ka repozitorijumu predmeta.
 7. Uradiš **code review** jednog tuđeg rada i link ka njemu upišeš u svoj `README.md`.
 
@@ -267,24 +267,23 @@ Sve primere naredbi sam pokrenuo sam u terminalu." (Ako niste koristili, napiši
 
 ## 7. Upisivanje u glavni `index.html`
 
-Glavni `index.html` (u korenu repozitorijuma) već sadrži **slot za svaku temu**. Menjate **tačno jedan red** — onaj u slotu svoje teme:
+Glavni `index.html` (u korenu repozitorijuma) ima podnaslove za grupe tema (*Fajlovi i direktorijumi*, *Mreža*...). U njega dodajete **tačno jedan `<li>`** — za svoj rad:
+
+1. Pronađite grupu (`<section class="grupa">`) kojoj pripada vaša tema — grupe su iste kao u tabeli za prijavu tema.
+2. Iskopirajte primer iz komentara na vrhu `index.html` i nalepite ga unutar `<ol class="teme">` te grupe, na mesto označeno sa `<!-- dodaj svoj <li> ovde -->`.
+3. Promenite: `id` i ID teme, naziv teme, težinu (`osnovna` / `srednja` / `napredna` — i u klasi i u tekstu), putanju do svog foldera i ime i prezime.
+
+Primer za temu T27:
 
 ```html
-                <!-- T27 -->
                 <li class="tema" id="T27">
-                    <span class="id">T27</span> <span class="naziv">grep — osnovni regularni izrazi (BRE)</span> ...
-                    <span class="nije-predato">još nije predato</span>      ← SAMO OVAJ RED
+                    <span class="id">T27</span> <span class="naziv">grep — osnovni regularni izrazi (BRE)</span> <span class="tezina srednja">srednja</span>
+                    <a href="studenti/petar_petrovic_mi26042/index.html">Petar Petrović</a>
                 </li>
 ```
 
-zamenite sa:
-
-```html
-                    <a href="studenti/petar_petrovic_mi26042/index.html">Petar Petrović</a>
-```
-
-- Ne dodajete nove redove, ne brišete prazne redove, ne menjate naziv teme ni tuđe slotove.
-- Zašto ovako? Svaka tema ima svoj, odvojen red. Zato Git može da spoji izmene 70 studenata **bez konflikata**. Ako dodate ili obrišete redove oko slota, napravićete konflikt sa kolegom.
+- Ne menjate ništa drugo u `index.html`: ni podnaslove, ni primer na vrhu, ni tuđe `<li>` elemente.
+- Stilovi glavne strane su u `stil.css` — ne menjate ga.
 
 ---
 
@@ -344,7 +343,9 @@ Pull Request (PR) otvarate **tek kad je rad završen** — otvoren PR znači "pr
 6. Ostavite štiklirano **Allow edits by maintainers** (tako nastavnica može da reši eventualni konflikt umesto vas).
 7. Kliknite **Create pull request**. PR se sada vidi u originalu: https://github.com/danijelasimic/uui-2026/pulls
 
-U kartici **Files changed** proverite da PR sadrži **samo** vaš folder i jedan izmenjen red u `index.html`.
+U kartici **Files changed** proverite da PR sadrži **samo** vaš folder i jedan dodat `<li>` u `index.html`.
+
+> PR otvoren sa grane `main` biće **automatski zatvoren** — rad se predaje samo sa grane `ime_prezime_brindeksa`.
 
 > Vi **ne merge-ujete** i **ne zatvarate** PR — ni svoj, ni tuđi. Samo ga otvarate.
 > Jedan student = jedan PR. Ne otvarajte novi PR za ispravke — samo push-ujte na istu granu.
@@ -384,7 +385,7 @@ Obavezni delovi su oni iz kontrolne liste u 11.4. "Očigledno nedostaje" znači 
 - nema tri HTML strane ili linkovi između njih ne rade;
 - nema tabele, liste, slike sa `alt` tekstom...;
 - stilovi su u HTML-u (*inline*) umesto u `style.css`, ili je sajt napravljen generatorom/šablonom;
-- nema `README.md` ili nije izmenjen slot u glavnom `index.html`.
+- nema `README.md` ili nije dodat `<li>` u glavni `index.html`.
 
 Isto važi i ako odaberete **Comment**, a uopšte ne primetite da nedostaje obavezan deo — takva recenzija nije stvarno urađena.
 
@@ -428,7 +429,7 @@ Pravilo palca: **sumnjate li da nešto obavezno fali → Request changes.** Appr
 ### Obavezni delovi
 - [ ] Folder `studenti/ime_prezime_brindeksa/` sa ispravnim imenom
 - [ ] `README.md` sa podacima i temom
-- [ ] Izmenjen samo svoj slot u glavnom `index.html` i link radi
+- [ ] Dodat jedan `<li>` u odgovarajuću grupu u glavnom `index.html` i link radi
 - [ ] Tri HTML strane (`index.html`, `tema.html`, `primeri.html`), povezane navigacijom koja radi na svakoj strani
 - [ ] Tema je obrađena: šta naredba radi, sintaksa, opcije (tabela), primeri sa izlazom
 - [ ] Svi obavezni HTML elementi (naslovi, paragrafi, liste, tabela, slika sa smislenim `alt`, unutrašnji i spoljašnji link, `<pre>`/`<code>`)
@@ -483,8 +484,8 @@ Ako neka stavka nije ispunjena, ne štiklirajte je i u obrazloženju napišite �
 
 U original ne možete ništa da upišete, ali vaš Pull Request može da sadrži izmene koje ne smeju da uđu. Svako od ovoga se kažnjava oduzimanjem poena (do svih poena za Git deo):
 
-- izmena tuđeg foldera ili tuđeg slota u `index.html`;
-- menjanje bilo čega van svog foldera i svog jednog reda u `index.html` (proverite *Files changed*!);
+- izmena tuđeg foldera ili tuđih `<li>` elemenata u `index.html`;
+- menjanje bilo čega van svog foldera i svog `<li>` u `index.html` (proverite *Files changed*!);
 - više otvorenih Pull Request-ova (jedan student = jedan PR);
 - zatvaranje svog PR-a i otvaranje novog umesto push-ovanja ispravki;
 - veliki i nepotrebni fajlovi (video, arhive, izvršni fajlovi, LaTeX pomoćni fajlovi).
@@ -515,7 +516,7 @@ git push -u origin petar_petrovic_mi26042
 Pri otvaranju PR-a *base repository* nije bio `danijelasimic/uui-2026`. Zatvorite taj PR (on je u vašem forku, to je dozvoljeno) i otvorite novi, proverivši red *base ← head* (korak 9.3).
 
 **Na GitHub-u piše „This branch is X commits behind danijelasimic:main"**
-To je normalno — drugi radovi su u međuvremenu spojeni u original. Ne morate ništa da radite; vaš PR menja samo vaš folder i vaš red, pa se spaja bez problema.
+To je normalno — drugi radovi su u međuvremenu spojeni u original. Ne morate ništa da radite; ako dođe do konflikta u `index.html`, rešava ga nastavnica pri merge-u.
 
 **`error: src refspec petar_petrovic_mi26042 does not match any`**
 Grana se drugačije zove ili još nemate nijedan commit. Proverite sa `git branch` i `git log`.

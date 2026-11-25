@@ -1,0 +1,42 @@
+# Zatvara Pull Request otvoren sa grane main (ili master) i ostavlja studentu objašnjenje.
+# Koristi pull_request_target: radi bez odobravanja za nove saradnike i NE pokreće
+# nikakav kod iz studentskog forka (ne radi se checkout) — čita samo ime grane.
+name: Provera grane
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  provera:
+    if: github.event.pull_request.head.ref == 'main' || github.event.pull_request.head.ref == 'master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const poruka = [
+              `Zdravo @${pr.user.login}, ovaj Pull Request je otvoren sa grane \`${pr.head.ref}\` i zato je automatski zatvoren.`,
+              ``,
+              `Rad se predaje **samo sa sopstvene grane** \`ime_prezime_brindeksa\`. Uradi sledeće u svom lokalnom klonu:`,
+              ``,
+              "```bash",
+              `git checkout -b ime_prezime_brindeksa      # tvoji commitovi prelaze na novu granu`,
+              `git push -u origin ime_prezime_brindeksa`,
+              "```",
+              ``,
+              `Zatim otvori **novi** Pull Request sa te grane (vidi README, sekcija „Pull Request").`
+            ].join("\n");
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: pr.number, body: poruka
+            });
+            await github.rest.pulls.update({
+              owner: context.repo.owner, repo: context.repo.repo,
+              pull_number: pr.number, state: "closed"
+            });
