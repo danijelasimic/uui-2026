@@ -1,0 +1,140 @@
+/* =========================================================
+   stil.css — stilovi za glavnu stranu sa spiskom radova
+   Uvod u informatiku 2026/2027
+   ========================================================= */
+
+/* ---------- Boje koje se ponavljaju ----------
+   Promenljive (custom properties) se definišu jednom u :root,
+   a koriste se sa var(--ime). Tako se boja menja na jednom mestu. */
+:root {
+    --tamno-plava: #1f3864;
+    --plava: #2e75b6;
+    --pozadina: #f4f6fa;
+    --okvir: #dde3ec;
+    --tekst: #222222;
+    --siva: #777777;
+}
+
+/* ---------- Osnovno za celu stranu ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: var(--tekst);
+    background-color: var(--pozadina);
+}
+
+/* ---------- Zaglavlje (plava traka na vrhu) ---------- */
+.zaglavlje {
+    background-color: var(--tamno-plava);
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.zaglavlje h1 {
+    margin: 0 0 0.5rem 0;
+}
+
+.zaglavlje p {
+    margin: 0;
+    opacity: 0.85;          /* malo providniji tekst ispod naslova */
+}
+
+/* ---------- Glavni deo: centriran, ograničene širine ---------- */
+main {
+    max-width: 960px;
+    margin: 0 auto;         /* auto levo i desno = centrirano */
+    padding: 1rem 1.5rem 2rem;
+}
+
+/* ---------- Naslovi grupa ---------- */
+.grupa h2,
+.primer h2 {
+    color: var(--tamno-plava);
+    border-bottom: 2px solid var(--plava);
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+}
+
+/* ---------- Lista radova ---------- */
+ol.teme {
+    list-style: none;       /* bez brojeva — ID teme je već u tekstu */
+    padding: 0;
+    margin: 0;
+}
+
+/* Ako u grupi još nema nijednog <li>, prikaži poruku.
+   :has(li) znači "sadrži bar jedan li", a :not(...) to negira. */
+ol.teme:not(:has(li))::before {
+    content: "Još nema predatih radova.";
+    color: var(--siva);
+    font-style: italic;
+}
+
+/* Jedan rad = jedna "kartica" */
+li.tema {
+    display: flex;          /* elementi u jednom redu */
+    flex-wrap: wrap;        /* na uskom ekranu prelaze u novi red */
+    align-items: center;
+    gap: 0.6rem;            /* razmak između elemenata */
+    background-color: white;
+    border: 1px solid var(--okvir);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    margin: 0.4rem 0;
+}
+
+li.tema:hover {
+    border-color: var(--plava);
+}
+
+/* ID teme, npr. T27 */
+.id {
+    font-weight: bold;
+    color: var(--plava);
+    min-width: 2.8rem;
+}
+
+/* Naziv teme zauzima sav slobodan prostor u redu */
+.naziv {
+    flex: 1;
+}
+
+/* Oznaka težine — ista osnova, različita boja */
+.tezina {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+}
+
+.tezina.osnovna  { background-color: #e2f0d9; }
+.tezina.srednja  { background-color: #fff2cc; }
+.tezina.napredna { background-color: #fbe5d6; }
+
+/* Link ka radu studenta */
+li.tema a {
+    font-weight: bold;
+    color: var(--tamno-plava);
+    text-decoration: none;
+    border-bottom: 2px solid var(--plava);
+}
+
+li.tema a:hover {
+    color: var(--plava);
+    border-bottom-color: var(--tamno-plava);
+}
+
+/* ---------- Primer upisa na vrhu ---------- */
+.primer li.tema {
+    border-style: dashed;   /* isprekidan okvir: ovo je samo primer */
+    background-color: #fbfcfe;
+}
+
+/* ---------- Podnožje ---------- */
+.podnozje {
+    text-align: center;
+    color: var(--siva);
+    font-size: 0.85rem;
+    padding: 2rem 1rem;
+}
