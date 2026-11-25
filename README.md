@@ -41,7 +41,7 @@ Tako se radi i u stvarnom svetu: na projektima kao što su Linux, Python ili VS 
 
 ### Šta odakle ide — kratka pravila
 
-- `git push` šalje izmene **u tvoj fork**, nikad u original. `origin` = tvoj fork.
+- `git push` šalje izmene **u tvoj fork**, nikad u original. 
 - U originalu se tvoj rad pojavljuje **tek posle merge-a**. Dok čekaš, tvoj rad je u tvom forku i u tvom Pull Request-u — to je u redu.
 - **Ne praviš novi fork** ni novi PR za ispravke. Samo `commit` + `push`, i PR se sam ažurira.
 
@@ -71,9 +71,9 @@ Tako se radi i u stvarnom svetu: na projektima kao što su Linux, Python ili VS 
 
 | Šta | Rok |
 |---|---|
-| Prijava teme u tabeli (sa GitHub korisničkim imenom) | **[DATUM]** |
-| Otvoren Pull Request (predaja) | **[DATUM]** |
-| Code review jednog rada + link u svom `README.md` | **[DATUM]** |
+| Prijava teme u tabeli (sa GitHub korisničkim imenom) | **1.9.2027.** |
+| Otvoren Pull Request (predaja) | **7.9.2027.** |
+| Code review jednog rada + link u svom `README.md` | **1.9.2027.** |
 
 Ukratko, šta radiš:
 
@@ -185,7 +185,7 @@ git config --global user.email "mi26042@alas.matf.bg.ac.rs"
 
 **Nikada ne radite na grani `main`.** Odmah posle kloniranja napravite svoju granu.
 
-Ime grane = ime vašeg foldera: `ime_prezime_brindeksa`, sve malim slovima, **bez naših slova** (š→s, đ→dj, č→c, ć→c, ž→z), reči odvojene donjom crtom.
+Ime grane = ime vašeg foldera: `ime_prezime_brindeksa`, sve malim slovima, **bez naših slova**, reči odvojene donjom crtom.
 
 ```bash
 git checkout -b petar_petrovic_mi26042
@@ -197,8 +197,6 @@ Proverite na kojoj ste grani:
 git branch        # zvezdica (*) označava trenutnu granu
 git status        # prvi red: "On branch petar_petrovic_mi26042"
 ```
-
-> Ako ste već klonirali repozitorijum ranije i samo nastavljate rad: `git checkout petar_petrovic_mi26042` (bez `-b`).
 
 ---
 
@@ -476,7 +474,8 @@ Ako neka stavka nije ispunjena, ne štiklirajte je i u obrazloženju napišite �
 ## 12. Merge
 
 - Pull Request **merge-uje isključivo nastavnica** (tehnički je onemogućeno svima ostalima).
-- Posle merge-a vaš rad se pojavljuje na https://danijelasimic.github.io/uui-2026/ (može da potraje nekoliko minuta).
+- Posle merge-a vaš rad se pojavljuje na https://danijelasimic.github.io/uui-2026/.
+- Merge i pregledanje radova nastavnica će u proseku raditi jednom mesečno. Ne o;ekujete odmah kada predate da će biti ptegledano. Ne šaljite mejl da je rad predat, svi predati radovi se već vide u okviru **Pull requests** kartice.
 
 ---
 
